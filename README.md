@@ -90,7 +90,7 @@ Foram feitas verificações se o campo vinha com valor ou se nessa coluna é opc
 
 Houve erros de formatos, muitos dados como IDs vinham como string e não dava pra validar como int, assim como os datetime, mas com pydantic usando funções de parse, deixei eles virem como string porém passando a validação no @field\_validator, com por exemplo garantir que um id seja um dígito 
 
-Forma feito teste, se a validação estava funcionando, testei alterando um campo por linha, os testes foram:  
+Foram feitos testes para ver se a validação estava funcionando, testei alterando um campo por linha, os testes foram:  
 validação de valores diferentes do tipo da coluna, como adicionar letra em campo int, e só um número em campo string  
 validação em  campos que não deviam ser nulos   
 validação se em campos que vem valores esperados de string aceitam valores diferentes dos esperados  
