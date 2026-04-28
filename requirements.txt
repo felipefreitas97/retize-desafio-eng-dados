@@ -1,0 +1,8 @@
+dbt-postgres==1.7.9
+pandas==2.2.2
+sqlalchemy==2.0.30
+psycopg2-binary==2.9.9
+pydantic==2.7.1
+python-dotenv==1.0.1
+streamlit==1.26.0
+dbt-core==1.7.9

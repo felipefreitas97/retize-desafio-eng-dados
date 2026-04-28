@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: social_media_raw
+    tables:
+      - name: raw_instagram_comments
+      - name: raw_instagram_media
+      - name: raw_instagram_media_insights
+      - name: raw_tiktok_comments
+      - name: raw_tiktok_posts

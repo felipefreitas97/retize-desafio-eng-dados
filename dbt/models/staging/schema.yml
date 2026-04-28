@@ -1,0 +1,104 @@
+version: 2
+
+models:
+
+  - name: stg_instagram_comments
+    description: "Comentários do Instagram padronizados"
+    columns:
+      - name: id
+        description: "ID do post"
+        tests:
+          - not_null
+
+      - name: comment_id
+        description: "ID do comentário"
+        tests:
+          - not_null
+          - unique
+
+      - name: comment_timestamp
+        description: "Timestamp do comentário UTC-3"
+        tests:
+          - not_null
+
+      - name: predicted_sentiment
+        description: "Sentimento previsto"
+        tests:
+          - accepted_values:
+              values: ['positivo', 'neutro', 'negativo']
+
+      - name: confidence_sentiment
+        description: "Confiança do modelo"
+        tests:
+          - not_null
+
+  # ----------------------------------------
+
+  - name: stg_instagram_media
+    description: "Posts do Instagram"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+
+      - name: username
+        tests:
+          - not_null
+
+      - name: timestamp
+        tests:
+          - not_null
+
+  # ----------------------------------------
+
+  - name: stg_instagram_media_insights
+    description: "Métricas dos posts do Instagram"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: comments
+        tests:
+          - not_null
+
+  # ----------------------------------------
+
+  - name: stg_tiktok_comments
+    description: "Comentários do TikTok padronizados"
+    columns:
+      - name: id
+        tests:
+          - not_null
+
+      - name: comment_id
+        tests:
+          - not_null
+          - unique
+
+      - name: comment_timestamp
+        tests:
+          - not_null
+          
+      - name: comments
+        tests:
+          - not_null
+
+
+  # ----------------------------------------
+
+  - name: stg_tiktok_posts
+    description: "Posts do TikTok"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+
+      - name: username
+        tests:
+          - not_null
+
+      - name: timestamp
+        tests:
+          - not_null

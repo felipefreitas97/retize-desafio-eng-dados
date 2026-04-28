@@ -1,0 +1,105 @@
+version: 2
+
+models:
+
+  # ==========================================
+  # MART POSTS
+  # ==========================================
+  - name: mart_posts_enriched
+    description: "Posts unificados de Instagram e TikTok com métricas de engajamento padronizadas"
+
+    columns:
+
+      - name: id
+        description: "Identificador único do post"
+        tests:
+          - not_null
+
+      - name: platform
+        description: "Plataforma de origem do post"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['instagram', 'tiktok']
+
+      - name: username
+        description: "Conta que publicou o conteúdo"
+
+      - name: timestamp
+        description: "Data de publicação do post"
+
+      - name: day_of_week
+        description: "Dia da semana do post"
+
+      # -------------------------
+      # MÉTRICAS
+      # -------------------------
+
+      - name: likes
+        description: "Quantidade de curtidas"
+
+      - name: comments
+        description: "Quantidade de comentários"
+
+      - name: shares
+        description: "Quantidade de compartilhamentos"
+
+      - name: saves
+        description: "Quantidade de salvamentos (Instagram) ou favoritos (TikTok)"
+        tests:
+          - not_null
+
+      - name: reach
+        description: "Alcance do post"
+
+      - name: engagement
+        description: "Métrica de engajamento ponderada baseada em interações e alcance"
+
+  # ==========================================
+  # MART COMMENTS
+  # ==========================================
+  - name: mart_comments_enriched
+    description: "Comentários enriquecidos com análise de sentimento"
+
+    columns:
+
+      - name: comment_id
+        description: "Identificador único do comentário"
+        tests:
+          - not_null
+          - unique
+
+      - name: post_id
+        description: "ID do post relacionado"
+        tests:
+          - not_null
+
+      - name: platform
+        description: "Plataforma de origem"
+        tests:
+          - accepted_values:
+              values: ['instagram', 'tiktok']
+
+      - name: username
+        description: "Conta associada ao comentário"
+
+      - name: comment_timestamp
+        description: "Data do comentário"
+
+      - name: day_of_week
+        description: "Dia da semana do comentário"
+
+      - name: predicted_sentiment
+        description: "Classificação de sentimento"
+        tests:
+          - accepted_values:
+              values: ['positivo', 'neutro', 'negativo']
+
+      - name: sentiment_value
+        description: "Valor numérico do sentimento (1, 0, -1)"
+
+      - name: confidence_sentiment
+        description: "Confiança da classificação"
+
+      - name: value_sentiment
+        description: "Sentimento ponderado pela confiança"
