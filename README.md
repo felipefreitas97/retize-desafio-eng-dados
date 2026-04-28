@@ -47,7 +47,7 @@ Também é possível rodar individualmente, src/[ingestion.py](http://ingestion.
 
 Depois de rodar o orquestrador ou rodar o streamlit run streamlit\_app.py, ele fica disponível em: [http://localhost:8501/](http://localhost:8501/)
 
-as querys estão disponíveis na pasta sql, e estarão sendo rodadas no streamlit também
+as querys estão disponíveis na pasta queries, e estarão sendo rodadas no streamlit
 
 caso queira rodar no DBeaver ou algum outro software, esses são os dados para acessar o banco  
 
