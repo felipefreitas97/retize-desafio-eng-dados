@@ -7,7 +7,7 @@ O primeiro passo foi fazer uma análise exploratória dos arquivos, entender cad
 
 Decidi por dar pesos a cada métrica, já que o engajamento é o quanto o usuário interage com o post, cada ação demonstra mais ou menos engajamento que a outra por exemplo um compartilhamento vale mais do que uma curtida e faz o post aparecer pra mais gente, entendo que isso pode gerar uma nota menor para storys por exemplo já que eles na maior parte só tem curtidas, e não costumam ter comentários, compartilhamentos, e nem dá pra salvar, mas o story por si só já é um tipo de post que gera um engajamento menor, então acho a pontuação justa.
 
-**Obs:** pensei em usar novos seguidores como parte da fórmula de engajamento por mais que seja relacionada a alcance, também poderia fazer parte do engajamento, só que não achei os dados confiáveis o suficiente, existiam muitas linhas com esse valor nulo, mesmo onde eram posts do instagram com vários acessos, curtidas, o valor ali provavelmente não era zero, então optei por não utilizar
+**Obs:** pensei em usar novos seguidores como parte da fórmula de engajamento por mais que seja relacionada a conversão, também poderia fazer parte do engajamento, só que não achei os dados confiáveis o suficiente, existiam muitas linhas com esse valor nulo, mesmo onde eram posts do instagram com vários acessos, curtidas, o valor ali provavelmente não era zero, então optei por não utilizar
 
 **Fórmula Sentimento:**   
  S \=\[ ( 1 ou \-1 x grau de confiança) \]
