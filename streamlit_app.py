@@ -33,7 +33,7 @@ def load_data(sql):
 
 @st.cache_data
 def list_sql_files():
-    sql_dir = Path(__file__).resolve().parent / 'sql'
+    sql_dir = Path(__file__).resolve().parent / 'queries'
     files = list(sql_dir.glob('*.sql'))
     def sort_key(f):
         import re
@@ -184,11 +184,11 @@ def render_dashboard():
 
 def render_business_queries():
     st.title('Perguntas de negócio')
-    st.markdown('Cada página abaixo reflete um arquivo SQL em `sql/` com a resposta a uma pergunta de negócio.')
+    st.markdown('Cada página abaixo reflete um arquivo SQL em `queries/` com a resposta a uma pergunta de negócio.')
 
     files = list_sql_files()
     if not files:
-        st.warning('Nenhum arquivo SQL encontrado na pasta `sql/`.')
+        st.warning('Nenhum arquivo SQL encontrado na pasta `queries/`.')
         return
 
     choices = {file.stem: file for file in files}
