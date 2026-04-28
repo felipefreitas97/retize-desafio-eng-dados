@@ -163,5 +163,5 @@ Todos os testes funcionaram e as validações estão ok, assim como os logs que 
 
 Ele gera uma visão geral de soma de algumas métricas, em **Tabela Análitica,** podendo selecionar entre as duas tabelas marts e adicionar filtros, como username e media type, também é possível ver as repostas das perguntas na opção de **Query das perguntas de negócio**.
 
-![Tabelas Marts Post e Comentários](img/streamlit 1.png)
-![Queries Perguntas do Negócio](img/streamlit 2.png)
+![Tabelas Marts Post e Comentários](img/streamlit1.png)
+![Queries Perguntas do Negócio](img/streamlit2.png)
